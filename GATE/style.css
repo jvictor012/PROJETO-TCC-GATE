@@ -235,7 +235,7 @@ body {
     position: absolute;
     top: 1rem;
     left: 5rem;
-    padding: 3rem;
+    padding: 1rem;
     border-radius: 1.5rem;
     width: 90%;
     height: 80%;
@@ -252,16 +252,19 @@ body {
 }
 
 .texto__sobre h2{
-    color: #ffffff;
+    color: #ce0e82;
     font-family: 'Boldonse', system-ui;
-    font-size: 2rem;
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 2rem;
     
 }
 .texto__sobre p{
     font-family: 'Boldonse', system-ui;
     color:#ffffff;
     font-size: 1.8rem;
-    margin: 8rem 5rem 2rem 8rem;
+    text-align: start;
+    padding: 3rem 3rem;
 }
 
 
