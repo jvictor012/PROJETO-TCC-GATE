@@ -34,9 +34,9 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-radius: 2rem;
     padding: 0.5rem;
     width: 100%;
+    position: relative;
 }
 .header .logo img {
     display: flex;
@@ -52,9 +52,12 @@ body {
     width: auto;
 }
 .navbar {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     display: flex;
     align-items: center;
-    min-width: none;
+    gap: 1.5rem;
 }
 .navbar a {
     display: flex;
@@ -69,23 +72,7 @@ body {
     color: #ce0e82;
     margin: 0 1rem;
 }
-.icons img {
-    margin-right: 2rem;
-    height: 2rem;
-    width: 2rem;
-    border-radius: 50%;
-}
-.icons img[alt="pesquisar"]:hover {
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 50%;
-    rotate: 90deg;
-}
-.icons img[alt="adicionar"]:hover {
-    height: 2.5rem;
-    width: 2.5rem;
-    border-radius: 50%;
-}
+
 
 
 /*HOMEPAGE*/
@@ -267,11 +254,99 @@ body {
     padding: 3rem 3rem;
 }
 
+.texto__contatos p{
+    font-family: 'Boldonse', system-ui;
+    font-weight: 1000;
+    font-style: normal;
+    color:#ce0e82;
+    font-size: 3rem;
+    text-align: start;
+    text-align: center;
+    margin-top: 4rem;
+}
 
+.contatos{
+    background-color: #000000;  
+    background-image:
+    linear-gradient(to top, #ffffff00 0%, #13131a 100%), 
+     url("https://www.transparenttextures.com/patterns/cartographer.png");
+    padding: 6rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.caixas{
+    display: flex;
+    flex-wrap: wrap;/*permite a quebra de linha das caixas*/
+    justify-content: center;/*centraliza as caixas na tela*/
+    gap:2rem;/*espaçamento entre as caixas*/
+    width: 100%;
+    max-width: 1200px;
+    backdrop-filter: linear-gradient(90deg, #000000, #000000);
+}
 
+.caixa1, .caixa2, .caixa3{
+    flex:1 1 500px;/*flex-grow, flex-shrink, flex-basis, torna flexivel como min de 300px*/
+    max-width: 350px;/*tamanho maximo da caixa*/
+    background-color: #1b093f;
+    border-radius: 1.5rem;
+    padding: 2rem;
+    box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.90);
+    height: 60vh;
+}
+.texto__contatos p{
+    font-family: 'Boldonse', system-ui;
+    color: #ce0e82;
+    font-size: 3rem;
+    text-align: center;
+    margin-bottom:1rem;
+}
+.nomeapp{/*classe do texto do nome do app*/
+    display: flex;
+    text-align: center;
+    justify-content: center;
+}
 
+.nomeapp p{
+    font-family: 'Boldonse', system-ui;
+    color: #ffffff;
+    font-size: 1.5rem;
+}
 
+.img__contatos{/*classe dos icones dos contatos*/
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+}
 
+.img__contatos:hover{/*classe dos icones dos contatos*/
+    display: flex;
+    justify-content: center;
+    margin-top: 5rem;
+    transform: scale(1.08);
+}
+
+.textowpp, .textoinstagram, .textoemail{
+    font-family: 'Boldonse', system-ui;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.textowpp, .textoinstagram, .textoemail, h2{
+    font-family: 'Boldonse', system-ui;
+    color: #ffffff;
+    text-align: center;
+    margin-top: 2rem;
+    font-size: 1rem;
+}
+.textowpp, .textoinstagram, .textoemail, p{
+    font-family: 'Boldonse', system-ui;
+    color: #ffffff;
+    text-align: center;
+    margin-top:0.5rem;
+    font-size: 0.8rem;
+}
 
 
 
