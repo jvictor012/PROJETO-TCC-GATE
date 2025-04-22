@@ -77,54 +77,43 @@ body {
 
 /*HOMEPAGE*/
 .background__home{
-    position: absolute;
-    top:0;
-    left:0;
-    width: 100%;
-    height: 100%;
+    display: relative;
     z-index: 0;
-    overflow: hidden;
 }
 .background__home video{
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.titulo{
-    position: absolute;
-    top: 15vh;
-    left: 36%;
-    color:#ce0e82;
-    margin-top: 5vh;
-    font-family: "Fredoka", sans-serif;
-    font-weight: 1000;
-    font-style: normal;
-    font-size: 8rem;
-    z-index: 1001;
-}
+
 .texto__home{
-    position: relative;
+        position: absolute;
+        top: 15%;
+        left: 5%;
+        right: 5%;
+        z-index: 2;
+    }
+
+.texto__home p{
     color:#ffffff;
-    margin-top: 40vh;
     font-family: 'Boldonse', system-ui;
     font-size: 2rem;
-    z-index: 1000;
-    margin-left:8rem;
-    margin-right: 5rem;
+    padding: 2rem;
+    text-align: start;
 }
-.texto__home p{
-    padding-top: 4rem;
-
-}
-.texto__home span{
-    color: #ce0e82;
+.texto__home p span{
+    color:#ce0e82;
     font-family: "Fredoka", sans-serif;
     font-weight: 1000;
-    font-style: normal;
-    font-size:3rem;
+    font-size: 3rem;
 }
 
-
+.texto__home h2{
+    color:#ce0e82;
+    font-family: "Fredoka", sans-serif;
+    font-weight: 1000;
+    font-size: 5rem;
+}
 /*CRIAR*/
 .criar{
     background-color: #13131a;
@@ -135,7 +124,7 @@ body {
     color: #ffffff;
     font-family: 'Boldonse', system-ui;
     font-size: 1.8rem;
-    margin: 3rem 5rem 2rem 8rem;
+    margin: 5rem 5rem 2rem 8rem;
 }
 .texto__criar p span{
     color: #ce0e82;
@@ -148,7 +137,6 @@ body {
 .texto__criar__chamada {
     font-family: 'Boldonse', system-ui;
     font-size: 1.8rem;
-    margin: 2rem 5rem 5rem 8rem;
 }
 .texto__criar__chamada .destaque{
     color: #00c3af;
@@ -160,12 +148,14 @@ body {
 
 .caixinha{
     background-color:#1b093f;
-    padding: 3rem;
+    padding: 1rem;
     margin: 5rem 4.5rem;
     border-radius: 1.5rem;
     width: 90%;
-    height: auto;
+    height: 90%;
     box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.90);
+    display: flex;
+    z-index: 1000;
 }
 
 .btn__criar{
@@ -339,6 +329,7 @@ body {
     text-align: center;
     margin-top: 2rem;
     font-size: 1rem;
+    font-weight: 100;
 }
 .textowpp, .textoinstagram, .textoemail, p{
     font-family: 'Boldonse', system-ui;
