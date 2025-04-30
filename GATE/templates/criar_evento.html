@@ -7,5 +7,15 @@
 </head>
 <body>
     <h1>crie seu evento aqui</h1>
+    <form method="POST" action="">
+
+        Nome do evento: <input type="text" name="id_evento" required>
+        data do evento: <input type="date" name="data_evento" required><br>
+        local do evento: <input type="local" name="local_evento" required><br>
+        horario de inicio do evento: <input type="time" name="inicio_evento" required>
+        horario de término do evento: <input type="time" name="fim_evento" required><br>    
+        <input type="submit" value="Gerar QR Code referente ao inicio do evento">
+        <input type="submit" value="Gerar QR Code referente ao final do evento">
+    </form>
 </body>
 </html>
