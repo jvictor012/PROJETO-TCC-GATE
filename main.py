@@ -1,11 +1,11 @@
 from flask import Flask, render_template, url_for, request, redirect, flash, session
-from GATE import db
-from GATE import Usuario, Evento
+from GATE.db import db
+from GATE.models import Usuario, Evento
 from flask_login import LoginManager, login_user, login_required
 import hashlib
 
 
-gate = Flask(__name__)
+gate = Flask(__name__, template_folder='templates')
 gate.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///gate.db'# cria o banco de dados
 gate.secret_key = 'ma.vi.dri.hay.'
 db.init_app(gate)# conecta o banco de dados no gate
