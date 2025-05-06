@@ -1,6 +1,6 @@
 from flask import Flask, render_template, url_for, request, redirect, flash, session
-from db import db
-from models import Usuario, Evento
+from GATE import db
+from GATE import Usuario, Evento
 from flask_login import LoginManager, login_user, login_required
 import hashlib
 
