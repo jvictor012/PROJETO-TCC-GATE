@@ -1,6 +1,6 @@
 from flask import Flask, render_template, url_for, request, redirect, flash, session
 from GATE.db import db
-from GATE.models import Usuario, Evento
+from GATE.models import Usuario, Evento, Aluno
 from flask_login import LoginManager, login_user, login_required
 import hashlib
 
@@ -58,11 +58,6 @@ def registrar():
 
         return redirect(url_for('escolha'))# redireciona para a página de criar evento
 
-@gate.route('/gerar_qrcode1', methods=['GET', 'POST'])
-@login_required# verifica se o usuário está logado
-def gerar_qrcode1():
-    return render_template('qrcode_1.html')
-
 @gate.route('/criar_evento', methods=['GET', 'POST'])
 @login_required# verifica se o usuário está logado
 def criar_evento():
@@ -82,6 +77,22 @@ def criar_evento():
         db.session.commit()
 
         return redirect(url_for('gerar_qrcode1'))
+    
+
+
+#GERANDO ROTA DE PRESENÇA 
+@gate.route('/registrar_presenca', methods=['GET', 'POST'])
+def presenca():
+    if request.method == 'GET':
+        return render_template('presenca.html')
+    elif request.method == 'POST':
+        nome_aluno = request.form['nomeF']
+        email_aluno = request.form['emailF']
+        matricula_aluno = request.form['matriculaF']
+
+        novo_aluno = Aluno(nome_aluno=nome_aluno, email_aluno=email_aluno, matricula_aluno=matricula_aluno)
+        db.session.add(novo_aluno)
+        db.session.commit()
 
 if __name__ == "__main__":
     with gate.app_context():
